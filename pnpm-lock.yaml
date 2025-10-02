@@ -44,6 +44,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@sanity/image-url':
+        specifier: ^1.2.0
+        version: 1.2.0
       next:
         specifier: 15.5.4
         version: 15.5.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
