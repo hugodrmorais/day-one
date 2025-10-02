@@ -5,6 +5,9 @@ export default defineCliConfig({
     projectId: 'sve7s4bq',
     dataset: 'production'
   },
+  server: {
+    port: 3334,
+  },
   deployment: {
     /**
      * Enable auto-updates for studios.
