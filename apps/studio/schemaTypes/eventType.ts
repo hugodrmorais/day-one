@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {CalendarIcon} from '@sanity/icons'
+import {DoorsOpenInput} from './components/DoorsOpenInput'
 
 export const eventType = defineType({
   name: 'event',
@@ -39,6 +40,9 @@ export const eventType = defineType({
       description: 'Number of minutes before the start time for admission',
       type: 'number',
       initialValue: 60,
+      components: {
+        input: DoorsOpenInput
+      }
     }),
     defineField({
       name: 'venue',
