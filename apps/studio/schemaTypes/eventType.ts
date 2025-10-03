@@ -22,6 +22,17 @@ export const eventType = defineType({
       options: {source: 'name'},
       validation: (rule) => rule.required().error(`Required to generate a page on the website`),
       hidden: ({document}) => !document?.name,
+      readOnly: ({value, currentUser}) => {
+        // Anyone can set the initial slug
+        if (!value) {
+          return false
+        }
+
+        const isAdmin = currentUser?.roles.some((role) => role.name === 'administrator')
+
+        // Only admins can change the slug
+        return !isAdmin
+      },
     }),
     defineField({
       name: 'eventType',
