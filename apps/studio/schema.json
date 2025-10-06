@@ -49,7 +49,7 @@
         },
         "optional": true
       },
-      "eventType": {
+      "format": {
         "type": "objectAttribute",
         "value": {
           "type": "union",

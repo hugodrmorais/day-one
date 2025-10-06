@@ -45,18 +45,6 @@ export const eventType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'eventType',
-      type: 'string',
-      deprecated: {
-        reason: 'Use the "Event format" field instead.'
-      },
-      readOnly: true,
-      options: {
-        list: ['in-person', 'virtual'],
-        layout: 'radio',
-      },
-    }),
-    defineField({
       name: 'date',
       type: 'datetime',
     }),
